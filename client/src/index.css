@@ -1,0 +1,114 @@
+/* 
+  MediConnect Global Style System & Tokens 
+  Built with HSL Harmonious Colors & Modern Resets
+*/
+
+:root {
+  /* Color Palette */
+  --primary-hsl: 211, 100%, 50%; /* #007bff */
+  --primary-dark-hsl: 211, 100%, 35%; /* #0056b3 */
+  --primary-light-hsl: 211, 100%, 96%; /* #ebf5ff */
+  
+  --primary: hsl(var(--primary-hsl));
+  --primary-dark: hsl(var(--primary-dark-hsl));
+  --primary-light: hsl(var(--primary-light-hsl));
+  
+  --secondary: #14b8a6; /* Teal */
+  --secondary-dark: #0f766e;
+  
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  
+  /* Neutral Palette */
+  --dark-navy: #0b2240;
+  --text-dark: #1d2939;
+  --text-muted: #637381;
+  --bg-light: #f8fafc;
+  --bg-white: #ffffff;
+  --border-color: #e2e8f0;
+  
+  /* Typography & Shadows */
+  --font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  --shadow-sm: 0 2px 4px rgba(11, 34, 64, 0.04);
+  --shadow-md: 0 10px 20px rgba(11, 34, 64, 0.06);
+  --shadow-lg: 0 20px 40px rgba(11, 34, 64, 0.1);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Common Core Page Layouts */
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+}
+
+.section-header h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--dark-navy);
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+.section-header p {
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+/* Glassmorphism utility card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+/* Modern Inputs Global Styling */
+input, select, textarea {
+  font-family: var(--font-family);
+}
